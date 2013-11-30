@@ -27,7 +27,7 @@ page.onError = function(msg, trace) {
     if (trace && trace.length) {
         msgStack.push('TRACE:');
         trace.forEach(function(t) {
-            msgStack.push(' -> ' + t.file + ': ' + t.line + (t.function ? ' (in function "' + t.function + '")' : ''));
+            msgStack.push(' -> ' + t.file + ': ' + t.line/* + (t.function ? ' (in function "' + t.function + '")' : '')*/);
         });
     }
 
